@@ -1,5 +1,6 @@
 import React from "react";
 import sunny from "../assets/Sunny.svg";
+import findIcon from "./helper";
 
 function WeatherCard({ city: { city, temperature, forecast } }) {
   return (
@@ -7,7 +8,7 @@ function WeatherCard({ city: { city, temperature, forecast } }) {
       <div className="img-container">
         <img
           className="card-img-top"
-          src={sunny}
+          src={findIcon(forecast)}
           alt="Card image cap"
           id="icon"
         />
