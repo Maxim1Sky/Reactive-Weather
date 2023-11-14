@@ -19,13 +19,9 @@ function App() {
         {cities.map((city, index) => (
           <>
             <WeatherCard key={index} city={city} />
-            <Location
-              data={cities}
-              location={location}
-              stateSetter={stateSetter}
-            />
           </>
         ))}
+        <Location data={cities} location={location} stateSetter={stateSetter} />
       </div>
     </>
   );

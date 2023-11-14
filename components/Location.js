@@ -6,6 +6,7 @@ function Location({ data, location, stateSetter }) {
 
   return (
     <div className="card">
+      <h2>Your Location: </h2>
       <div className="img-container">
         <img
           className="card-img-top"
