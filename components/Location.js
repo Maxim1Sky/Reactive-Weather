@@ -1,8 +1,19 @@
 import React from "react";
 import findIcon from "./helper";
+import cities from "../data";
 
-function Location({ data, location, stateSetter }) {
-  const theCity = data.find((city) => city.city === location);
+function Location({ location }) {
+  const theCity = cities.find((city) => city.city === location);
+  if (!theCity) {
+    return (
+      <>
+        <div className="card">
+          <h2>Location not Found</h2>
+          <p>Try a different place</p>
+        </div>
+      </>
+    );
+  }
 
   return (
     <div className="card">
