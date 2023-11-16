@@ -15,12 +15,12 @@ function App() {
       <h3 className="subtitle">Up to the minute weather news</h3>
       <Form location={location} setLocation={setLocation} />
       <div className="app">
+        <Location location={location} />
         {cities.map((city, index) => (
           <>
             <WeatherCard key={index} city={city} />
           </>
         ))}
-        <Location location={location} />
       </div>
     </>
   );
